@@ -2,11 +2,11 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import ToDo from "../../../data/types";
 
 interface toDosState {
-  todos: ToDo[];
+  list: ToDo[];
 }
 
 const toDosInitialState: toDosState = {
-  todos: [],
+  list: [],
 };
 
 const toDosSlice = createSlice({
@@ -18,16 +18,14 @@ const toDosSlice = createSlice({
       action: PayloadAction<ToDo[]>
     ): toDosState => ({
       ...currentToDoState,
-      todos: [...action.payload],
+      list: [...action.payload],
     }),
     removeToDo: (
       currentToDoState,
       action: PayloadAction<number>
     ): toDosState => ({
       ...currentToDoState,
-      todos: currentToDoState.todos.filter(
-        (todo) => todo.id !== action.payload
-      ),
+      list: currentToDoState.list.filter((todo) => todo.id !== action.payload),
     }),
   },
 });
