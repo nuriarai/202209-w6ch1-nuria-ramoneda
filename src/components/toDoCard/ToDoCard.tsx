@@ -7,7 +7,6 @@ interface ToDoCardProps {
 }
 
 const ToDoCard = ({ todo: { name, isDone } }: ToDoCardProps): JSX.Element => {
-  const icon = "&#10003;";
   return (
     <ToDoCardStyled className="todo-card">
       <span className="todo-card__done">&#11093;</span>
