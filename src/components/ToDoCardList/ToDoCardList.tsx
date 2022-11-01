@@ -1,14 +1,14 @@
 import { useAppSelector } from "../../redux/hooks";
+import ToDoCard from "../toDoCard/ToDoCard";
 
 const ToDoCardList = (): JSX.Element => {
   const todos = useAppSelector(({ todos }) => todos.list);
 
   return (
     <ul>
-      {todos.map((tasca) => (
-        <li key={tasca.id}>
-          {tasca.id} - {tasca.name} {tasca.isDone ? `&#10003;` : ``} -{" "}
-          <button className="button--remove">Remove</button>
+      {todos.map((todo) => (
+        <li key={todo.id}>
+          <ToDoCard todo={todo} />
         </li>
       ))}
     </ul>
