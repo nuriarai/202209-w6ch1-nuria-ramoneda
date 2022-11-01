@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { useAppDispatch } from "./app/hooks";
+import { useAppDispatch } from "./redux/hooks";
 import { loadToDosActionCreator } from "./redux/features/toDos/toDosSlice";
 import toDosData from "./data/toDosData";
 import ToDoCardList from "./components/ToDoCardList/ToDoCardList";

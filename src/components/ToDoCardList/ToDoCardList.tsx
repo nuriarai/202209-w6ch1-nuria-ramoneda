@@ -1,4 +1,4 @@
-import { useAppSelector } from "../../app/hooks";
+import { useAppSelector } from "../../redux/hooks";
 
 const ToDoCardList = (): JSX.Element => {
   const todos = useAppSelector(({ todos }) => todos.list);
